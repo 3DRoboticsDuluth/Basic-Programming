@@ -1,6 +1,6 @@
 package org.firstinspires.ftc.teamcode.pedroPathing;
 
-import com.pedropathing.follower.Follower;
+import org.firstinspires.ftc.teamcode.pedroPathing.Follower;
 import com.pedropathing.localization.Pose;
 import com.pedropathing.util.Constants;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
@@ -22,6 +22,8 @@ import org.firstinspires.ftc.teamcode.pedroPathing.constants.LConstants;
 public class BasicDriveOpMode extends OpMode {
     private Follower follower;
     private final Pose startPose = new Pose(0,0,0);
+    public double OPEN = .4;
+    public double CLOSE = .8;
 
     /** This method is call once when init is played, it initializes the follower **/
     @Override
@@ -57,6 +59,11 @@ public class BasicDriveOpMode extends OpMode {
         - Turn Left/Right Movement: -gamepad1.right_stick_x
         - Robot-Centric Mode: true
         */
+        if (gamepad1.a) {
+            follower.servo.setPosition(OPEN);
+        } else if (gamepad1.b) {
+            follower.servo.setPosition(CLOSE);
+        }
 
         follower.setTeleOpMovementVectors(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x, true);
         follower.update();
@@ -68,7 +75,6 @@ public class BasicDriveOpMode extends OpMode {
 
         /* Update Telemetry to the Driver Hub */
         telemetry.update();
-
     }
 
     /** We do not use this because everything automatically should disable **/
