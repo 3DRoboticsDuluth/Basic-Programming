@@ -72,6 +72,7 @@ public class BasicDriveOpMode extends OpMode {
         telemetry.addData("X", follower.getPose().getX());
         telemetry.addData("Y", follower.getPose().getY());
         telemetry.addData("Heading in Degrees", Math.toDegrees(follower.getPose().getHeading()));
+        telemetry.addData("Servo Position", follower.servo.getPosition());
 
         /* Update Telemetry to the Driver Hub */
         telemetry.update();

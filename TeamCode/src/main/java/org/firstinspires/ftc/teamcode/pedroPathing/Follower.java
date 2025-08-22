@@ -159,6 +159,7 @@ public class Follower {
         this.leftRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.leftRearMotorName);
         this.rightRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightRearMotorName);
         this.rightFront = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightFrontMotorName);
+        this.servo = (Servo)this.hardwareMap.get(Servo.class, "servo");
         this.leftFront.setDirection(FollowerConstants.leftFrontMotorDirection);
         this.leftRear.setDirection(FollowerConstants.leftRearMotorDirection);
         this.rightFront.setDirection(FollowerConstants.rightFrontMotorDirection);
