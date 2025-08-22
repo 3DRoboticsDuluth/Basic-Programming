@@ -22,8 +22,8 @@ import org.firstinspires.ftc.teamcode.pedroPathing.constants.LConstants;
 public class BasicDriveOpMode extends OpMode {
     private Follower follower;
     private final Pose startPose = new Pose(0,0,0);
-    public double OPEN = .4;
-    public double CLOSE = .8;
+    public static double OPEN = 0.4;
+    public static double CLOSE = 0.8;
 
     /** This method is call once when init is played, it initializes the follower **/
     @Override
