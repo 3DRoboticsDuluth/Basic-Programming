@@ -48,6 +48,7 @@ public class Follower {
     private DcMotorEx leftRear;
     private DcMotorEx rightFront;
     private DcMotorEx rightRear;
+    //define servo
     private List<DcMotorEx> motors;
     private DriveVectorScaler driveVectorScaler;
     public PoseUpdater poseUpdater;
@@ -156,6 +157,7 @@ public class Follower {
         this.leftRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.leftRearMotorName);
         this.rightRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightRearMotorName);
         this.rightFront = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightFrontMotorName);
+        //init servo
         this.leftFront.setDirection(FollowerConstants.leftFrontMotorDirection);
         this.leftRear.setDirection(FollowerConstants.leftRearMotorDirection);
         this.rightFront.setDirection(FollowerConstants.rightFrontMotorDirection);
@@ -182,6 +184,7 @@ public class Follower {
         this.leftRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.leftRearMotorName);
         this.rightRear = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightRearMotorName);
         this.rightFront = (DcMotorEx)this.hardwareMap.get(DcMotorEx.class, FollowerConstants.rightFrontMotorName);
+        //init servo
         this.leftFront.setDirection(FollowerConstants.leftFrontMotorDirection);
         this.leftRear.setDirection(FollowerConstants.leftRearMotorDirection);
         this.rightFront.setDirection(FollowerConstants.rightFrontMotorDirection);

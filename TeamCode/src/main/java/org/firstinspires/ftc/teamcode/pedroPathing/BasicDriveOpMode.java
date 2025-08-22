@@ -57,6 +57,7 @@ public class BasicDriveOpMode extends OpMode {
         - Turn Left/Right Movement: -gamepad1.right_stick_x
         - Robot-Centric Mode: true
         */
+        //controls
 
         follower.setTeleOpMovementVectors(-gamepad1.left_stick_y, -gamepad1.left_stick_x, -gamepad1.right_stick_x, true);
         follower.update();
@@ -65,6 +66,7 @@ public class BasicDriveOpMode extends OpMode {
         telemetry.addData("X", follower.getPose().getX());
         telemetry.addData("Y", follower.getPose().getY());
         telemetry.addData("Heading in Degrees", Math.toDegrees(follower.getPose().getHeading()));
+        //telemetry
 
         /* Update Telemetry to the Driver Hub */
         telemetry.update();
